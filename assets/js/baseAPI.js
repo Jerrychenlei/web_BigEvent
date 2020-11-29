@@ -13,7 +13,7 @@ $.ajaxPrefilter(function (ajaxOpt) {
   //  为所有的ajax请求统一配置complete事件函数
   ajaxOpt.complete = function (res) {
     // 1.判断返回的数据是否在告诉我们 没有登录
-    console.log(res);
+    // console.log(res);
     if (res.responseJSON.status == 1 && res.responseJSON.message == '身份认证失败！') {
       // 2.没有登录，则
       // 2.1显示 需要重新登录的消息 显示结束后 再执行清空token和跳转操作
